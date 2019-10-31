@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MySQL的安装与配置 - Twilight</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="Starlex,"> 
+    <meta name="description" content="JustMyBlog,
+相关资料：navicat-keygen项目
+
+一、MySQL下载百度搜索mysql可以到达MySQL官网，如下图。
+
+
+在该页面上点击DOWNLOADS，会跳转到以下界面
+
+
+
+
+在浏览器开始下载,"> 
+    <meta name="author" content="StarlexAtlas"> 
+    <link rel="alternative" href="atom.xml" title="Twilight" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+</head>
+</html>
+<body class="loading">
+    <span id="config-title" style="display:none">Twilight</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url="http://starlex.online"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">MySQL的安装与配置</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">MySQL的安装与配置</h1>
+        <div class="stuff">
+            <span>十月 13, 2019</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <blockquote>
+<p>相关资料：<a href="https://github.com/DoubleLabyrinth/navicat-keygen" target="_blank" rel="noopener">navicat-keygen项目</a></p>
+</blockquote>
+<h3 id="一、MySQL下载"><a href="#一、MySQL下载" class="headerlink" title="一、MySQL下载"></a>一、MySQL下载</h3><p>百度搜索mysql可以到达<a href="https://www.mysql.com/" target="_blank" rel="noopener">MySQL官网</a>，如下图。</p>
+<img src="\img\MySQL\0.png" style="zoom: 25%;">
+
+<p>在该页面上点击<code>DOWNLOADS</code>，会跳转到以下界面</p>
+<img src="\img\MySQL\1.png" style="zoom:25%;">
+
+<img src="\img\MySQL\2.png">
+
+<p>在浏览器开始下载之后我们稍作等待。</p>
+<h3 id="二、MySQL的初始化配置"><a href="#二、MySQL的初始化配置" class="headerlink" title="二、MySQL的初始化配置"></a>二、MySQL的初始化配置</h3><blockquote>
+<p>注：如果你在上一步选用了安装包基本上一路确认到底就可以了，中途可能会提示你缺少一些东西，请参照安装程式的说明进行安装。而如果你只下载了server的话，将压缩包解压放到任何你喜欢的位置就好。</p>
+</blockquote>
+<p>在MySQL下载安装完成后，我们需要在第一次启动时对MySQL进行配置，其中包括</p>
+<ul>
+<li>MySQL配置文件修改</li>
+<li>MySQL服务的初始化与启用</li>
+<li>root账号密码重置</li>
+<li>与第三方数据库管理工具链接</li>
+</ul>
+<p>下面对各项进行说明</p>
+<h5 id="MySQL配置文件修改"><a href="#MySQL配置文件修改" class="headerlink" title="MySQL配置文件修改"></a>MySQL配置文件修改</h5><p><em>如果你害怕改错的话，建议还是提前备份一份比较好</em></p>
+<p>如果你是从官网下载的最新版本，那么你使用的就是MySQL8.0版本，而如果你是直接解压群里的数据库.zip的话，你将会得到一个5.7版本的安装包，这两个版本在具体使用上的区别并不是很大，但8.0版本在一些细节（密码加密方式）上进行了更新，可能会导致一些低版本的第三方数据库管理工具不能正常连接。</p>
+<p>不同版本的配置文件位置也不同。</p>
+<blockquote>
+<p>在文件管理器上点击查看标签，就可以看到以下栏目</p>
+</blockquote>
+<img src="\img\MySQL\3.png">
+
+<p><strong>5.7版本</strong>：<code>C:\ProgramData\MySQL\MySQL Server 5.7</code>，并且需要打开<strong>隐藏的项目</strong>选项，才能看到其中的my.ini配置文件</p>
+<p><strong>8.0版本</strong>：安装/解压位置，需要手动新建配置文件my.ini（新建文本文件然后自己改扩展名即可），如果看不到扩展名（.txt,.exe一类的），需要手动打开<strong>文件扩展名</strong>选项</p>
+<p>对my.ini文件进行如下配置，如果是8.0版本只要复制进去就好。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[client] </span><br><span class="line">default-character-set = utf8</span><br><span class="line"></span><br><span class="line">[mysql] </span><br><span class="line">default-character-set = utf8</span><br><span class="line"></span><br><span class="line">[mysqld] </span><br><span class="line">character-set-client-handshake = FALSE </span><br><span class="line">character-set-server = utf8</span><br><span class="line">collation-server = utf8_unicode_ci </span><br><span class="line">init_connect=’SET NAMES utf8’</span><br></pre></td></tr></table></figure>
+
+<h5 id="MySQL服务的初始化与启用"><a href="#MySQL服务的初始化与启用" class="headerlink" title="MySQL服务的初始化与启用"></a>MySQL服务的初始化与启用</h5><p>在进行完配置文件的修改后，我们需要对数据库进行第一次启动，也就是初始化。</p>
+<blockquote>
+<p>win+R可以快速打开运行窗口，而在该窗口中输入cmd则可以打开命令提示符（小黑窗），可以说是整个windows系统的控制台。</p>
+<p>而win+X则可以快速打开一个快捷启动栏，其中有windows power shell与他的管理员模式，power shell可以算是命令提示符的进阶版本，并且根据linux的指令习惯添加了一些更加方便的功能，一般来说，如果你运行了一个在命令提示符中显示权限不足的功能，在power shell的管理员模式下就能正常运行。</p>
+<p>↓ 管理员模式下的windows power shell</p>
+</blockquote>
+<img src="\img\MySQL\4.png">
+
+<ol>
+<li><p>首先使用cd指令移动到你的mysql安装目录，再移动到其内部的bin文件夹下，当PS后面跟随的是你的mysql安装路径\bin后就可以进行下面的操作了</p>
+<img src="\img\MySQL\5.png">
+</li>
+<li><p>输入指令<code>mysqld --initialize --console</code>(这里我就不展示了，因为我已经初始化完了…)，等待一段时间后，会看到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2018-04-20T02:35:05.464644Z 5 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: APWCY5ws&amp;hjQ</span><br></pre></td></tr></table></figure>
+
+<p>这样一条数据，其中<code>APWCY5ws&amp;hjQ</code>则是初始化数据库时，为root（管理员账号）自动生成的初始化密码，<strong>非常重要，记下来。</strong></p>
+<blockquote>
+<p>如果是5.7版本，还需要执行<code>mysqld --initialize-insecure</code>来初始化data目录</p>
+</blockquote>
+</li>
+<li><p>输入指令<code>mysqld install</code>，安装mysql服务，并令它开机启动，运行完毕后，输入指令<code>net start mysql</code>来启动mysql服务。</p>
+<blockquote>
+<p>net stop mysql停止mysql服务</p>
+</blockquote>
+</li>
+</ol>
+<h5 id="root账号密码重置"><a href="#root账号密码重置" class="headerlink" title="root账号密码重置"></a>root账号密码重置</h5><p>在mysql服务开启后，输入指令<code>mysql -u root -p</code>命令来登录mysql。</p>
+<img src="\img\MySQL\6.png">
+
+<blockquote>
+<p>-h参数：MySQL主机名，如果登陆本机可以忽略</p>
+<p>-u参数：用户名，root表示管理员账户，也是自动被创建的账户</p>
+<p>-p参数：密码，可以在输入命令的时候直接输入密码来登录，但是不推荐，如果此处留空的话会如上图给出数据密码的入口。</p>
+<p>（参数之间必须用空格分割开来，但是参数选项和参数之间可以连着）</p>
+</blockquote>
+<p>在出现了Enter password框之后就可以输入密码了（也就是之前需要我们保存的那个密码），在输入后如果出现了Welcome to the MySQL monitor…等语句则说明你已经成功登录mysql。</p>
+<p>在第一次登录MySQL后，无论你使用什么指令，mysql都会提示你使用ALTER USER指令来重置密码。</p>
+<img src="\img\MySQL\7.png">
+
+<p>请参照上述说明来重置密码。</p>
+<h5 id="与第三方数据库管理工具链接"><a href="#与第三方数据库管理工具链接" class="headerlink" title="与第三方数据库管理工具链接"></a>与第三方数据库管理工具链接</h5><ol>
+<li><p>Navicat</p>
+<blockquote>
+<p>由于8.0更换了密码加密方式所以如果要使用8.0连接navicat的话需要更改mysql中的密码加密方式。</p>
+</blockquote>
+<p><strong>更改加密方式</strong></p>
+<p>首先使用<code>mysql -uroot -p</code>并输入密码登录mysql的root账户，</p>
+<p>输入<code>ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;password&#39;;</code>修改密码以及验证方式；（其中password处填入你想要设置的密码）</p>
+<p>最后输入<code>FLUSH PRIVILEGES;</code>刷新配置。</p>
+<img src="\img\MySQL\8.png">
+
+<p><strong>连接navicat</strong></p>
+<p>创立一个新连接，连接到MySQL（因为NavicatPremium是全数据库可连接的，需要选择连接数据库类型）</p>
+<img src="\img\MySQL\9.png">
+
+<p>在该页面定义你的连接名称（随意）并输入密码，点击左下角测试连接，如果测试成功的话就可以建立连接了。</p>
+<img src="\img\MySQL\10.png">
+</li>
+<li><p>MySQL Workbench</p>
+<p>官方图形化控制界面（所以其实这个不算第三方……），不过比较难用，可以下载，而如果你使用的是安装包的话，会直接下载下来，可以直接使用。</p>
+<p>只要你开启了mysql服务，workbench就会自动识别到。</p>
+</li>
+<li><p>idea</p>
+<p>点击右边标签页中的database，可以看到如下页面。</p>
+<img src="\img\MySQL\11.png">
+
+<p>点击标签页打开后的“+”号，可以看到如下界面，该页面的配置同navicat，如果出现了下方的警告，说明需要下载额外的驱动文件，只要点击<code>download</code>连接，idea就会自动下载，同navicat，在配置完成后，点击下方的<code>Test Connection</code>按钮，如果测试成功的话就可以<code>OK</code>了。</p>
+<img src="\img\MySQL\12.png">
+
+</li>
+</ol>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="/music/SI0t.mp3">
+            </audio>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+        data-ae='true'
+        data-ci='2f0d7b79953651813188'
+        data-cs='da92e3f6582a8e6938646d8cde35d25f9e127e25'
+        data-r='StarlexAtlas.github.io'
+        data-o='StarlexAtlas'
+        data-a='StarlexAtlas'
+        data-d='true'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、MySQL下载"><span class="toc-number">1.</span> <span class="toc-text">一、MySQL下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、MySQL的初始化配置"><span class="toc-number">2.</span> <span class="toc-text">二、MySQL的初始化配置</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#MySQL配置文件修改"><span class="toc-number">2.0.1.</span> <span class="toc-text">MySQL配置文件修改</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#MySQL服务的初始化与启用"><span class="toc-number">2.0.2.</span> <span class="toc-text">MySQL服务的初始化与启用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#root账号密码重置"><span class="toc-number">2.0.3.</span> <span class="toc-text">root账号密码重置</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#与第三方数据库管理工具链接"><span class="toc-number">2.0.4.</span> <span class="toc-text">与第三方数据库管理工具链接</span></a></li></ol></li></ol></li></ol>
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
